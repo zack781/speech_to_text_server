@@ -1,5 +1,4 @@
 from scipy.io.wavfile import write
-import numpy as np
 
 ##samplerate = 44100; fs = 100
 ##t = np.linspace(0., 1., samplerate)
