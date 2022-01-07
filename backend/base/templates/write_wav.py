@@ -1,12 +1,10 @@
 from scipy.io.wavfile import write
+import speech_recognition as sr
 import numpy as np
-import os, boto3
-from boto3 import s3
-import sounddevice as sd
-from minio import Minio
-import io
-import wave
 from ..models import Audio
+
+import tempfile
+
 #from playsound import playsound
 
 ##samplerate = 44100; fs = 100
@@ -24,6 +22,9 @@ def wav_file(audio_str):
         audio_arr[i] = int(float(audio_arr[i]))
 
     data = np.asarray(audio_arr, dtype=np.int16)
-    #sd.play(data, 8000)
-    write("example4.wav", 8000, data)
-    #playsound('example4.wav')
+    
+    tempWavFile = tempfile.mktemp('.wav')
+    filename = tempWavFile.replace("\\", "/")
+    write(filename, 8000, data)
+    return filename
+    #playsound('example2.wav')

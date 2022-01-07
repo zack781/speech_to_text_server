@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-nwaw71&*^@7=y7atmk5rgk69#r!f-b170lc7xginq+#h+=&^9m
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', '.herokuapp.com',
+    '127.0.0.1', 'rocky-garden-03603.herokuapp.com',
 ]
 
 
@@ -144,19 +144,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-
+AWS_LOCATION = 'static'
 AWS_ACCESS_KEY_ID = 'AKIAVUXCG2LDP6N6R27R'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'radgroup12'
 AWS_URL = os.environ.get('AWS_URL')
 AWS_DEFAULT_ACL = None
-AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_REGION_NAME = 'us-east-1'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 
 STATIC_URL = 'https://radgroup12.s3.amazonaws.com/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_URL = 'https://radgroup12.s3.amazonaws.com/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#DEFAULT_FILE_STORAGE = 'app.storage_backends.MediaStorage'
+#STATICFILES_FINDERS = (           'django.contrib.staticfiles.finders.FileSystemFinder',    'django.contrib.staticfiles.finders.AppDirectoriesFinder',)
+AWS_DEFAULT_ACL = None
 
 import django_heroku
-django_heroku.settings(locals(), staticfiles=False)
+django_heroku.settings(locals(), staticfiles=True)
