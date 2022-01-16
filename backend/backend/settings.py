@@ -24,6 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '___'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -142,8 +145,8 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 AWS_LOCATION = 'static'
-AWS_ACCESS_KEY_ID = 'AKIAVUXCG2LDP6N6R27R'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = '___'
+AWS_SECRET_ACCESS_KEY = '___'
 AWS_STORAGE_BUCKET_NAME = 'radgroup12'
 AWS_URL = os.environ.get('AWS_URL')
 AWS_DEFAULT_ACL = None
