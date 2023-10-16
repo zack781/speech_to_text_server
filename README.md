@@ -1,1 +1,2 @@
-![PXL_20211014_165203809](https://github.com/zack781/speech_to_text_server/assets/43324306/49f2441d-4cbe-4b0a-a543-797176083c7a)
+
+<img src="[https://your-image-url.type](https://github.com/zack781/speech_to_text_server/assets/43324306/23f44f9a-1d05-47fa-a3f8-6a0408ab67ee)https://github.com/zack781/speech_to_text_server/assets/43324306/23f44f9a-1d05-47fa-a3f8-6a0408ab67ee" width="100" height="100">
